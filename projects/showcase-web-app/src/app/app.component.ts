@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'showcaseWebApp';
+
+  selectedValue = 0;
+
+  displaySelection(event: Event) {
+    this.selectedValue = (event as CustomEvent<number>).detail;
+  }
 }

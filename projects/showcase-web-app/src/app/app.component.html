@@ -102,7 +102,10 @@
 
 <div class="content" role="main">
 
-  <rate-component [value]="3"></rate-component>
+  <rate-component [value]="3"
+    (onRateSelected)="displaySelection($event)"></rate-component>
+  
+  <h3>Selected rate: {{selectedValue > 0 ? selectedValue : 'no selection done yet.' }}</h3>
 
 </div>
 
